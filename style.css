@@ -1,0 +1,153 @@
+
+body{
+    font-size: medium;
+    background-color:rgb(16, 16, 15);
+}
+.barnav{
+  background-color: black;
+  color: green;
+  overflow: hidden;
+}
+.barnav a:hover{
+  background: aquamarine;
+  box-shadow: 0 0 20px 5px skyblue;
+  color:red;
+}
+.barnav a{
+ float:left;
+ text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  cursor:pointer;
+  
+}
+
+p{
+  box-shadow: white;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+img{
+    height: 150px;
+    animation-duration: 5s;
+    animation-direction:alternate ;
+}
+button{
+    size: 175px;
+    
+}
+.gallover{
+    position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+}
+.button.gallover img{
+    width: 550px;
+      height: 350px;
+      display: block;
+}
+.button.gallover.hover{
+    transform: scale(1.1);
+}
+h1{
+    color:rgb(238, 87, 87);
+    font-style: italic;
+}
+
+  
+.footer.row{
+    width:100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: grey;
+    font-size:0.8mm;
+}
+footer .row a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+  }
+footer{
+    background-color: black;
+    color:white;
+    margin: 0px;
+    padding: 5px;
+}
+footer .row a:hover {
+    color: #fff;
+  }
+  
+  .footer .row ul {
+    width: 100%;
+    padding-left: 600px;
+    padding-top: 25px;
+  }
+  
+  .footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+  }
+  
+  .footer .row a i {
+    font-size: 2em;
+    margin: 0% 20px;
+  }
+  @media (max-width: 720px) {
+    .footer {
+      text-align: left;
+      padding: 5%;
+    }
+    .footer .row ul li {
+      display: block;
+      margin: 10px 0px;
+      text-align: center;
+      
+    }
+    .footer .row a i {
+      margin: 0% 13%;
+    }
+  }
+  .fa {
+    padding-left: 30px;
+    font-size: 20px;
+    width: 25px;
+    text-align: center;
+    text-decoration: transparent;
+  }
+  
+  .fa:hover {
+    opacity: 0.6;
+  }
+  .fa-facebook {
+    padding-top: 50px;
+    padding-left: 800px;
+    background:transparent;
+    color: white;
+  }
+  .fa-twitter {
+    background: transparent;
+    color: white;
+    
+  }
+  #text {
+    text-decoration: none;
+    color: rgb(233, 231, 231);
+    transition: 0.5s;
+    padding-left: 595px;
+    padding-top: 25px;
+    padding-bottom: 35px;
+  }

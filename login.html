@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="https://static.thenounproject.com/png/37118-200.png"/>
+    <title>Sign in</title>
+        <link rel="stylesheet" href="loginstyle.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+      
+      <body>
+        <div class="wrap">
+          <form action="">
+            <h1>User Login</h1>
+            <div class="input-box">
+              <input type="text" id="username" placeholder="Username" required>
+             
+            </div>
+            <div class="input-box">
+              <input type="password" id="password" placeholder="Password" required>
+              <i class='bx bxs-lock'></i>
+            </div>
+            <div class="remember-forget">
+              <label><input type="checkbox">Remember me</label>
+              <a href="#">Forget password?</a>
+            </div>
+            <button type="submit" class="btn" onclick="submitForm()">Login</button>
+           
+      </form>
+      <script>
+        function submitForm() {
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+          var validUsername = "user123";
+          var validPassword = "pass123";
+          if (username === validUsername && password === validPassword) { 
+            alert("Login successful!");
+            window.history.back();
+          } else {
+            alert("Invalid username or password.");
+          }
+        }
+      </script>
+        
+         
+    </body>
+    
+      </html>
