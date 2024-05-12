@@ -160,22 +160,41 @@ span{
     padding-top: 25px;
     padding-bottom: 35px;
     }
+    .barnav .lbt{
+  width: 120px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .5s;
+}
+.barnav .lbt:hover{
+  background: #fff;
+  color:red;
+}
   </style>
 </head>
 <body>
   <header>
     
-    <div class="barnav">
+    <nav class="barnav">
       <a href="pro.jsp"><b>HOME</b></a>
       <a href="gallery.html" ><b>GALLERY</b></a>
-     <a href="categories.html" ><b>BIRDS-DETAILS</b></a>
+     <a href="details.jsp" ><b>BIRDS-DETAILS</b></a>
      <a href="login.html"><b>LOGIN</b></a>
      <button class="lbt">
       <%= session.getAttribute("username") %>
+      <img style="width:30px;height:30px;border-radius:50%" src="profile-user.png">
      </button>
      <a href="logout.html" ><b>Logout</b></a>
     
-    </div>
+    </nav>
   </header>
 <h1> MY COLLECTIONS</h1>
 <div class="gallery">

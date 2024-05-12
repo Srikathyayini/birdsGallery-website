@@ -12,7 +12,7 @@
     
       <body>
          <p> <a href="admin.html"><b>Admin_login</b></a></p>
-        <form action="login.jsp" name="http" method="post">
+        <form action="" name="http" method="post">
         <div id="loginForm" class="wrap">
             <h1>User Login</h1>
             <div class="input-box">
@@ -27,7 +27,45 @@
          <button type="submit"  class="btn">Login</button>
             <p class="register">Not a member?  <a href="reg.html"><b>Register here!</b></a></p>
       </form>
-      
+      <% 
+   String username=request.getParameter("user1");
+   String pass=request.getParameter("pwd1");
+   try{
+     Class.forName("oracle.jdbc.driver.OracleDriver");
+      Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","kathyayini");
+     Statement st=con.createStatement();
+       ResultSet rs=st.executeQuery("select * from registerForm"); 
+      int c=0;
+      while(rs.next()){
+        if(username.equals(rs.getString(1)) && pass.equals(rs.getString(7))){
+           c=1;  
+        }
+      }
+      if(c==1){
+        %>
+        <script>
+          alert("Login Successful!!");
+          window.location.href = "pro.jsp";
+          </script> 
+        <%  
+        
+      }
+        else{
+       %> <script>
+         alert("Invalid username and password!!");
+         window.location.href = "login.html";
+         </script>
+         <%  
+         
+        }
+        
+   }
+   
+   catch(Exception e){
+      out.print(e);
+   }
+   
+%>
        
  </body>
     

@@ -5,33 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js" integrity="sha512-Dm5UxqUSgNd93XG7eseoOrScyM1BVs65GrwmavP0D0DujOA8mjiBfyj71wmI2VQZKnnZQsSWWsxDKNiQIqk8sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <link rel="icon" href="https://static.thenounproject.com/png/37118-200.png"/>
     <title>Birds Gallery</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  
     <header>
-    
       <nav class="barnav">
         <span>BirdsGallery </span>
-      <a href="pro.html" ><b>HOME</b></a>
-      <a href="gallery.html" ><b>GALLERY</b></a>
-      <a href="categories.html" ><b>BIRDS-DETAILS</b></a>
-      <a href="services.html" ><b>SERVICES</b></a>
+      <a href="home.html" ><b>HOME</b></a>
+      <a href="gallery.jsp" ><b>GALLERY</b></a>
+      <a href="details.jsp" ><b>BIRDS-DETAILS</b></a>
+      <a href="services.html" ><b>Services</b></a>
      <button class="lbt">
-      <%= session.getAttribute("user") %>
+      <%= session.getAttribute("username") %>
+      <img style="width:30px;height:30px;border-radius:50%" src="profile-user.png">
      </button>
-     <button class="input-box"><i class="fa-solid fa-circle-user"></i></button>
-        </nav>
+     <a href="logout.html" ><b>Logout</b></a>
+      </nav>
     </header>
-    
-     <div class="splash">
-      
+     <div class="splash">  
     <p style="color:rgb(151, 32, 32);padding-top: 2.5cm;padding-left: 2cm;letter-spacing: 1mm;font-size:xx-large;animation-duration: 3s;
     animation-name: slidein;"><b>BIRDS...</b></p>
     <p style="color:white;padding-bottom: 5.5cm;padding-left: 1cm;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size:6mm;animation-duration: 3s;
@@ -70,7 +65,7 @@
   </div>
  </div>
  <div style="background-image:url(https://png.pngtree.com/thumb_back/fh260/background/20230524/pngtree-hummingbird-hovering-between-red-flowers-image_2680651.jpg);height: 550px;background-size: cover;background-repeat: no-repeat;">
-    <p style="color:rgb(32, 151, 127);padding-top: 2.5cm;padding-left: 2cm;letter-spacing: 1mm;font-size: x-large;" ><a href="https://simple.wikipedia.org/wiki/Hummingbird"><b>HUMMING BIRD</b></p></a>
+    <p style="padding-top: 2.5cm;padding-left: 2cm;letter-spacing: 1mm;font-size: x-large;" ><a href="https://simple.wikipedia.org/wiki/Hummingbird"><b>HUMMING BIRD</b></p></a>
     <p style="color:white;padding-top: 1cm;padding-left: 1cm;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size:6mm;"><a href="https://simple.wikipedia.org/wiki/Hummingbird"><b>Hummingbirds have compact bodies with relatively long, bladelike wings having</br> anatomical structure enabling helicopter-like flight in any direction, including the</br> ability to hover. Particularly while hovering, the wing beats produce the humming</br> sounds, which function to alert other birds.</b></p></a>
   </div>
   <div class="birdspe">
@@ -104,14 +99,14 @@
 <footer>
      <div class="footer" id="foot">
     <div class="row">
-    <a href="#" class="_blank" target="_blank" rel="birds"><i class="fa fa-facebook"></i></a>
-    <a href="#" target="_blank" rel="birds"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.facebook.com/groups/help.animals.birds/" class="_blank" target="_blank" rel="birds"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com/animals_birds_welfare/?hl=en" target="_blank" rel="birds"><i class="fa fa-instagram"></i></a>
     <a href="#" target="_blank" rel="birds"><i class="fa fa-youtube"></i></a>
     <a href="#" target="_blank" rel="birds"><i class="fa fa-twitter"></i></a>
     <a href="#" target="_blank" rel="birds"><i class="fa fa-linkedin"></i></a>
   </div>
  
-  <div class="row">
+  <div class="row"> 
   <ul>
   <li><a href="contact .html" target="_blank" rel="birds">Contact us</a></li>
   <li><a href="photograph.html" target="_blank" rel="birds">Photograph</a></li>

@@ -86,7 +86,6 @@ table{
     color: grey;
     font-size:0.8mm;
 }
-
 .footer .row a {
     text-decoration: none;
     color: gray;
@@ -158,7 +157,20 @@ table{
     background: white;
   
   }
-  
+  .lbt{
+  width: 120px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .5s;
+}
   #text {
     text-decoration: none;
     color: rgb(233, 231, 231);
@@ -173,10 +185,9 @@ table{
       <div class="barnav">
         <a href="pro.jsp"><b>HOME</b></a>
         <a href="gallery.html" ><b>GALLERY</b></a>
-       <a href="categories.html" ><b>BIRDS-DETAILS</b></a>
-       <a href="login.html"><b>LOGIN</b></a>
        <button class="lbt">
         <%= session.getAttribute("username") %>
+        <img style="width:30px;height:30px;border-radius:50%" src="profile-user.png">
        </button>
        <a href="logout.html" ><b>Logout</b></a>
       

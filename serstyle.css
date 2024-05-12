@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: black;
+}
+.main1{
+    display:flex;
+    padding-left: 25px;
+    justify-content: space-evenly;
+}
+.board{
+    padding-top: 15px;
+    border-radius: 15%;
+    background: white;
+    box-shadow:0  5px 10px black;
+   width:385px;
+   height: 355px;
+}
+.control{
+    padding-top: 15px;
+    background: white;
+   border-radius: 15%;
+    box-shadow:0  5px 10px black;
+   width:385px;
+   height: 355px;  
+}
+
+.treat{
+    padding-top: 15px;
+    background: white;
+   border-radius: 15%;
+    box-shadow:0  5px 10px black;
+   width:385px;
+   height: 355px;
+}
+.feed{
+    padding-top: 15px;
+    background: white;
+    box-shadow:0  5px 10px black;
+   width:385px;
+   height: 355px;
+   border-radius: 15%;
+}
+.groom{
+    padding-top: 15px;
+    background: white;
+    box-shadow:0  5px 10px black;
+   width:385px;
+   height: 355px;
+   border-radius: 15%;
+}
+.train{
+    padding-top: 15px;
+    background: white;
+    box-shadow:0  5px 10px black;
+   width:385px;
+   height: 355px;
+   border-radius: 15%;
+}
+ img{
+    width: 55px;
+ }
+ .feed img{
+    width: 105px;
+ }
+ .groom img{
+    width: 105px;
+
+ }
+.main2{
+    display: flex;
+    padding-left: 25px;
+    justify-content: space-evenly;
+    padding-top: 25px;
+}
+span{
+    color: white;
+}
+h1{
+    color:white;
+}
+
+button{
+    border-radius: 5%;
+    width: 115px;
+    height: 68px;
+  border: 2px solid green ;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8em;
+  color: black;
+  font-weight: 500;
+  transition:ease-out .5s;
+}
+button:hover{
+    background:burlywood;
+  color:red;
+}
+.trainimg{
+    width: 130px;
+    
+}
+.treat img{
+    width: 150px;
+}
+.control img{
+    width: 95px;
+}

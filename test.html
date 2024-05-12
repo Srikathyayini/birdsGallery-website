@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>Mock Test</title>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz App</h1>
+        <div id="question-container">
+          <p id="question-text"></p>
+          <div id="answer-buttons"></div>
+        </div>
+        <div id="controls-container">
+          <button id="start-button">Start Quiz</button>
+          <div id="timer-container">
+            <span id="timer-text">Time: <span id="timer">30sec</span></span>
+          </div>
+        </div>
+      </div>
+<script>
+        const quizQuestions = [
+    {
+    question: "What is the National Bird of India?",
+    options: ["Pegion", "Peacock", "Crow", "Parrot"],
+    correctAnswer: "Peacock"
+    },
+    {
+    question: "Which of the following birds can fly to great heights?",
+    options: ["Sparrow", "Ostrich", "Hen", "Eagle"],
+    correctAnswer: "Eagle"
+    },
+    {
+    question: "Which of the following birds can fly over long distances?",
+    options: ["Sparrow", "Penguin", "Hen", "Parrot"],
+    correctAnswer: "Sparrow"
+    },
+    {
+    question: "Which of the following bird is a water bird?",
+    options: ["Eagle", "Penguin", "Crone", "Peacock"],
+    correctAnswer: "Crone"
+    },
+    {
+    question: "The tail of a bird helps it to?",
+    options: ["fly fast", "fly slow", "fly high", "Change direction"],
+    correctAnswer: "Change direction"
+    }
+];
+let currentQuestionIndex = 0;
+let score = 0;
+let timeLeft = 30;
+let timerInterval;
+function startQuiz() {
+  document.getElementById("start-button").style.display = "none";
+  displayQuestion();
+  startTimer();
+}
+
+function displayQuestion() {
+  const currentQuestion = quizQuestions[currentQuestionIndex];
+  const questionText = document.getElementById("question-text");
+  const answerButtons = document.getElementById("answer-buttons");
+  questionText.innerHTML = "";
+  answerButtons.innerHTML = "";
+  questionText.innerHTML = currentQuestion.question;
+
+  currentQuestion.options.forEach(option => {
+    const button = document.createElement("button");
+    button.innerText = option;
+    button.classList.add("answer-button");
+    answerButtons.appendChild(button);
+    button.addEventListener("click", function() {
+      checkAnswer(option);
+    });
+  });
+}
+function checkAnswer(selectedOption) {
+  const currentQuestion = quizQuestions[currentQuestionIndex];
+  if (selectedOption === currentQuestion.correctAnswer) {
+    score++;
+  }
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < quizQuestions.length) {
+    displayQuestion();
+  } else {
+    endQuiz();
+  }
+}
+function startTimer() {
+  timerInterval = setInterval(function() {
+    timeLeft--;
+    document.getElementById("timer").textContent = timeLeft;
+    if (timeLeft <= 0) {
+        alert("Time over");
+      endQuiz();
+      
+    }
+  }, 1000);
+}
+function endQuiz() { 
+  clearInterval(timerInterval);
+  const scorePercentage = (score / quizQuestions.length) * 100; 
+  const questionContainer = document.getElementById("question-container");
+  alert("Quiz Completed");
+  questionContainer.innerHTML = `
+    <h2>Quiz Completed!</h2>
+    <p>Your Score: ${score} out of ${quizQuestions.length}</p>
+    <p>Score Percentage: ${scorePercentage}%</p>
+    <a href="categories.html"><button class="sbt">Back</button></a>
+  `;
+}
+document.getElementById("start-button").addEventListener("click", startQuiz);
+
+      </script>
+    
+</body>
+</html>

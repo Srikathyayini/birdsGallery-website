@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Item</title>
+<link rel="stylesheet" href=""> 
+</head>
+<body>
+    <center>
+<h1>Book Services</h1>
+<form id="bookingForm" action="booking.jsp" method="post">
+    <label for="itemName">Service Name:</label><br>
+    <input type="text" id="itemName" name="itemName" required><br><br>
+    <label for="birdName">Bird Name:</label><br>
+    <input type="text" id="itemName" name="itemName" required><br><br>
+    <label for="bookingDate">Booking Date:</label><br>
+    <input type="date"  id="bookingDate" name="bookingDate" required><br><br>
+    
+    <label for="bookingTime">Available Booking Time:</label><br>
+    <input type="time" name="bookingTime" id="bookingTime">
+    <br><br>
+   <label for="address">Booking Address</label><br>
+   <textarea cols="30" rows="5" value="address" name="address" id="address"> </textarea>  <br>     
+          
+  <br>  <input type="submit" value="Book Item">
+</form>
+</center>
+</body>
+</html>

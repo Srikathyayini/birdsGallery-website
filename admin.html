@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="https://static.thenounproject.com/png/37118-200.png"/>
+    <title>Login in</title>
+        <link rel="stylesheet" href="adminst.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js" integrity="sha512-Dm5UxqUSgNd93XG7eseoOrScyM1BVs65GrwmavP0D0DujOA8mjiBfyj71wmI2VQZKnnZQsSWWsxDKNiQIqk8sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    
+      <body>
+      <p>  <a href="login.html"><b>User_Login</b></a></p>
+        <form action="admin.jsp" name="http" method="post">
+        <div id="loginForm" class="wrap">
+            <h1>Admin Login</h1>
+            <div class="input-box">
+              <input type="text" id="user" name="user" placeholder="Username" required>
+              <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="input-box">
+              <input type="password" id="pwd" name="pwd" placeholder="Password" required><i class="fa-solid fa-lock"></i>
+            </div>
+            
+          <button type="submit" class="btn" onclick="submitform()">Login</button>
+            <p class="register">Not a member?  <a href="reg.html"><b>Register here!</b></a></p>
+      </form>
+     <script>
+        function submitform(){
+          var user = document.getElementById("user").value;
+          var pwd = document.getElementById("pwd").value;
+        
+        if (user.trim() === '' || pwd.trim() === '' ) {
+        alert("Please fill in all fields.");
+        return;
+    }
+   if(user=='admin' && pwd=='admin123'){
+    alert("Admin login Successful!!!.");
+    window.location.href="admin.jsp";
+  }
+  else{
+    alert("Invalid Login credientials!!");
+    window.location.href="login.html";
+  }
+}
+     </script>
+    </body>
+    
+      </html>

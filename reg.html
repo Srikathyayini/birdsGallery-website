@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://static.thenounproject.com/png/37118-200.png"/>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        
+        body{
+        background: url(https://i.pinimg.com/originals/75/a6/a3/75a6a30f217051ec96226712929ef4ad.jpg);
+        background-size: cover;
+        background-repeat: no-repeat; 
+        margin: 75px;
+       padding: 0;
+       }
+    .regst{
+      
+    width: 420px;
+    box-shadow: 0  5px 5px   white;
+    color: black;
+    border-radius: 30px;
+    padding: 50px;
+    }   
+    label{
+       font-size: 20px;
+       color: black;   
+       font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    input[type=text],input[type=password],input[type=name],input[type=email]{
+        background-color: #ddd;
+        outline: none;
+        border-radius: 15px;
+        height: 5px;
+        width:375px;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+    }
+
+    input[type=radio]{
+        width: 130px;
+        height: 15px;
+        padding: 0%;
+       
+    }
+    textarea{
+        width: 385px;
+        border-radius: 15px;
+        font-size: 18px;
+    }
+    input[type=date]{
+        background-color: #ddd;
+        width: 395px;
+        height: 35px;
+        border-radius: 15px;
+    }
+    .btn,.rtn{
+        height: 45px;
+        width: 95px;
+        border-radius: 15px;
+        background: linear-gradient(180deg,skyblue,rgb(249, 53, 249));
+       
+    }
+.btn:hover{
+    background: rgb(255, 141, 198);
+    box-shadow: yellowgreen;
+}
+    .rtn:hover{
+    background: rgb(249, 155, 202);
+}
+ h1{
+    font-size: 50px;
+    text-align: center;
+    background: linear-gradient(
+        to right,
+         rgb(95, 211, 95) 10%,
+         orange 40%,
+        yellow 60%,
+        rgb(34, 251, 34) 100%
+       
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+     background-size: 200% auto;
+    animation: textShine 10s  linear infinite ;
+}
+@keyframes textShine {
+    to{
+      background-position: 150% center;
+    }
+}
+.count{
+    padding-left: 155px;
+}
+.cou{
+    padding-left: 30px;
+}
+.state{
+    width: 190px;
+    height: 30px;
+    background-color: #ddd;
+}
+.country{
+    background-color: #ddd;
+    height: 30px;
+    width: 190px;
+}
+    </style>
+</head>
+<body>
+   
+    <form action="regcon.jsp" name="reg" method="post">
+        <center><h1>REGISTRATION FORM</h1></center>
+        <div id="regstForm" class="regst">
+            <label>UserName</label><br>
+            <input type="text" id="un" name="uname" placeholder="Enter username"><br>
+            <label>FirstName</label><br>
+            <input type="text" id="un" name="fname" placeholder="Enter firstname">
+            <label>LastName</label><br>
+            <input type="text" id="un" name="lname" placeholder="Enter lastname"><br>
+            <label>Gender</label><br>
+          <input type="radio" name="gr" value="M" required /><b>Male</b> 
+            <input type="radio" name="gr" value="F"/><b>Female</b> <br> 
+           <br> 
+           <label>Address</label><br>
+          <textarea cols="50" rows="5" value="address" name="address" id="address"> </textarea>  <br>     
+            
+             <label>Email</label><br>
+            <input type="email" name="email" placeholder="email" ><br>
+            <label>Password</label><br>
+            <input type="password" id="pw" name="password" placeholder="Enter password" ><br>
+            <label>ConfirmPassword</label><br>
+            <input type="password" id="cpw" name="cpassword" placeholder="Enter password"><br>
+            <br>
+            <br><input type="submit" class="btn" id="btn" value="login" name="lb">&nbsp;
+            <input type="reset" class="rtn" value="Reset" name="rb">
+        </div>
+           </form>
+        
+    </script>
+</body>
+</html>
